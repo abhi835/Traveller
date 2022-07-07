@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "513505381620",
+    "project_id": "traveller-11015",
+    "storage_bucket": "traveller-11015.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513505381620:android:f3f91a319972b694c8a2a1",
+        "android_client_info": {
+          "package_name": "com.example.traveller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513505381620-jlsbt5l774vaouish2imv19d9fgmcohn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.traveller",
+            "certificate_hash": "bda7f9000700a6f13634df8eb5872fe9ce2a3adf"
+          }
+        },
+        {
+          "client_id": "513505381620-dvknq6dqakmve0ekpvd7si900vipctbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz9GhkkW8mk0RP2QZ7jLOC95rOKW0miEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513505381620-dvknq6dqakmve0ekpvd7si900vipctbc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
