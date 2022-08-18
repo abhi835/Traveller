@@ -21,17 +21,17 @@
 
 
         <ImageView
-            android:id="@+id/StateImage"
+            android:id="@+id/CityPlacesImage"
             android:layout_width="wrap_content"
             android:layout_height="160dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/stateRating"
+            android:id="@+id/CityPlacesRating"
             android:layout_width="@dimen/_38mdp"
             android:layout_height="@dimen/_23mdp"
             android:background="@color/white"
@@ -41,10 +41,10 @@
             android:textColor="@color/white"
             android:textStyle="bold"
 
-            app:layout_constraintBottom_toTopOf="@+id/StateTitle"
+            app:layout_constraintBottom_toTopOf="@+id/CityPlacesTitle"
             app:layout_constraintRight_toRightOf="parent" />
         <TextView
-            android:id="@+id/StateTitle"
+            android:id="@+id/CityPlacesTitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -56,10 +56,10 @@
             android:textColor="@color/white"
             android:background="#FFEB3B"
             android:textAppearance="@dimen/_12mdp"
-            app:layout_constraintEnd_toEndOf="@+id/StateImage"
+            app:layout_constraintEnd_toEndOf="@+id/CityPlacesImage"
             app:layout_constraintHorizontal_bias="0.611"
-            app:layout_constraintStart_toStartOf="@+id/StateImage"
-            app:layout_constraintBottom_toBottomOf="@+id/StateImage"
+            app:layout_constraintStart_toStartOf="@+id/CityPlacesImage"
+            app:layout_constraintBottom_toBottomOf="@+id/CityPlacesImage"
             />
 
 

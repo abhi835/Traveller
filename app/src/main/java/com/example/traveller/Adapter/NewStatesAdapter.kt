@@ -7,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.traveller.MainActivity
 import com.example.traveller.Model.NewStates
 import com.example.traveller.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
@@ -17,16 +16,18 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions
 class NewStatesAdapter(options: FirestoreRecyclerOptions<NewStates>,val listener:IPostAdapter) : FirestoreRecyclerAdapter<NewStates, NewStatesAdapter.PostViewHolder>(
     options
 ) {
-
-
     class PostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-     val statepic:ImageView = itemView.findViewById(R.id.StateImage)
-        val statename:TextView = itemView.findViewById(R.id.StateTitle)
-        val stateRating:TextView = itemView.findViewById(R.id.stateRating)
+     val statepic:ImageView = itemView.findViewById(R.id.CityPlacesImage)
+        val statename:TextView = itemView.findViewById(R.id.CityPlacesTitle)
+        val stateRating:TextView = itemView.findViewById(R.id.CityPlacesRating)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): PostViewHolder {
                  val viewholder = PostViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.gridview_item,parent,false))
+             viewholder.itemView.setOnClickListener{
+            listener.onStateClicked(snapshots.getSnapshot(viewholder.adapterPosition).id)
+
+             }
         return viewholder
     }
 
@@ -39,5 +40,5 @@ class NewStatesAdapter(options: FirestoreRecyclerOptions<NewStates>,val listener
     }
 }
 interface IPostAdapter{
-    fun onLikeClicked(postId:String)
+    fun onStateClicked(postId:String)
 }

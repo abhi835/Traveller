@@ -62,6 +62,7 @@ class SignInActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)    //it opens the dialog of emails
     }
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {    //when you come back after google signin
         super.onActivityResult(requestCode, resultCode, data)                            //it tells activity about signin
 

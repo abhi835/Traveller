@@ -1,14 +1,17 @@
 package com.example.traveller
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.traveller.Adapter.IPostAdapter
 import com.example.traveller.Adapter.NewStatesAdapter
 import com.example.traveller.Model.NewStates
 import com.example.traveller.databinding.ActivityMainBinding
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 
@@ -42,6 +45,7 @@ class MainActivity : AppCompatActivity(),IPostAdapter {
 
         binding.recyclerview.adapter = adapter
         binding.recyclerview.layoutManager = GridLayoutManager(this,2)
+        binding.recyclerview.itemAnimator = null
     }
     override fun onStart() {    //We want adapter to listen the changes made in database so we have created onstart function which will start listening once the app start
         super.onStart()
@@ -53,7 +57,17 @@ class MainActivity : AppCompatActivity(),IPostAdapter {
         adapter.stopListening()
     }
 
-    override fun onLikeClicked(postId: String) {
-        TODO("Not yet implemented")
+    private  fun getStateById(postId:String): Task<DocumentSnapshot> {
+        return stateCollection.document(postId).get()
+    }
+    override fun onStateClicked(postId: String) {
+//        val stateid = getStateById(postId)
+            Toast.makeText(this,"$postId Clicked",Toast.LENGTH_SHORT).show()
+        val intent = Intent(this,StateCitiesActivity::class.java)
+        intent.putExtra("stateId",postId)
+        startActivity(intent)
+
+//        stateCollection.document(postId).collection("Nalanda")
+
     }
 }
