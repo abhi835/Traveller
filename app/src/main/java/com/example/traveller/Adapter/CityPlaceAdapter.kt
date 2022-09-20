@@ -25,6 +25,7 @@ class CityPlaceAdapter(options: FirestoreRecyclerOptions<CityPlaces>,val listene
         viewholder.itemView.setOnClickListener{
             listener.CityPlaceClicked(snapshots.getSnapshot(viewholder.adapterPosition).id)
         }
+
         return viewholder
     }
 

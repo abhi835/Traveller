@@ -1,49 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Traveller"
-        android:textAlignment="center"
-        android:textColor="#FFEB3B"
-        android:textSize="@dimen/_45mdp"
-        android:textStyle="bold"
+ <ImageView
+     android:id="@+id/menu"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_5mdp"
+     android:layout_marginTop="@dimen/_5mdp"
+     android:src="@drawable/menu"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <ImageView
+     android:id="@+id/userImage"
+     android:layout_width="42dp"
+     android:layout_height="42dp"
 
-
-
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="50dp"
-        android:background="#777777"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:src="@drawable/person"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:layout_marginEnd="@dimen/_5mdp"
+     android:layout_marginTop="@dimen/_5mdp"
+     app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+ <TextView
+     android:id="@+id/traveller"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Explore"
+     android:textAlignment="center"
+     android:textColor="@color/black"
+     android:textSize="@dimen/_45mdp"
+     android:textStyle="bold"
+     android:drawableEnd="@drawable/arrowdown"
+android:layout_marginStart="@dimen/_5mdp"
+     app:layout_constraintBottom_toTopOf="@+id/view"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/menu" />
 
 
+ <View
+     android:id="@+id/view"
+     android:layout_width="match_parent"
+     android:layout_height="1dp"
+     android:layout_marginTop="20dp"
+     android:background="@color/white"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/traveller" />
+
+ <TextView
+     android:id="@+id/searchplacebutton"
+     android:layout_width="@dimen/_245mdp"
+     android:layout_height="@dimen/_35mdp"
+     android:layout_marginStart="@dimen/_5mdp"
+     android:text="Search For a Destination"
+     android:textStyle="bold"
+     android:gravity="center"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/view"
+     app:drawableStartCompat="@drawable/location" />
+
+ <View
+     android:layout_width="wrap_content"
+     android:layout_height="1dp"
+     android:background="@color/grey_font"
+app:layout_constraintEnd_toStartOf="@+id/searchimage"
+     app:layout_constraintStart_toStartOf="@id/searchplacebutton"
+     app:layout_constraintTop_toBottomOf="@id/searchplacebutton" />
+
+
+
+
+ <ImageView
+     android:id="@+id/searchimage"
+     android:layout_width="@dimen/_25mdp"
+     android:layout_height="@dimen/_25mdp"
+     android:src="@drawable/search"
+     android:background="#FFEB3B"
+     app:layout_constraintBottom_toBottomOf="@+id/searchplacebutton"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@id/searchplacebutton"
+     app:layout_constraintTop_toTopOf="@id/searchplacebutton"
+     />
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/recyclerview"
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_marginTop="@dimen/_30mdp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/searchplacebutton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

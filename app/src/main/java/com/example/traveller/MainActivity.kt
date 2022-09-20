@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.traveller.Adapter.IPostAdapter
 import com.example.traveller.Adapter.NewStatesAdapter
 import com.example.traveller.Model.NewStates
@@ -26,7 +27,11 @@ class MainActivity : AppCompatActivity(),IPostAdapter {
 //        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.hide()
+       binding.searchplacebutton.setOnClickListener{
+           val intent = Intent(this,searchplaceActivity::class.java)
+           startActivity(intent)
+       }
 
         setUpRecyclerView()
 
@@ -44,7 +49,7 @@ class MainActivity : AppCompatActivity(),IPostAdapter {
         adapter = NewStatesAdapter(recyclerViewOptions,this)
 
         binding.recyclerview.adapter = adapter
-        binding.recyclerview.layoutManager = GridLayoutManager(this,2)
+        binding.recyclerview.layoutManager = LinearLayoutManager(this)
         binding.recyclerview.itemAnimator = null
     }
     override fun onStart() {    //We want adapter to listen the changes made in database so we have created onstart function which will start listening once the app start
