@@ -8,23 +8,15 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
+    android:background="@color/backgroundcolor"
     app:layout_constraintTop_toTopOf="parent">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".PlaceActivitySecond">
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/placephotos"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_277mdp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/uttarakhand"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".PlaceActivitySecond">
 
 
         <!--        <ImageView-->
@@ -38,14 +30,26 @@
         <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
 
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/placephotos"
+            android:layout_width="@dimen/_277mdp"
+            android:layout_height="@dimen/_350mdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/placename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8mdp"
-            android:text="Buddha's stupa"
+            android:text="xxxxx"
             android:textAlignment="gravity"
-            android:textColor="@color/black"
+            android:textColor="@color/color"
             android:textSize="@dimen/_18mdp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +63,9 @@
             android:layout_marginBottom="@dimen/_4mdp"
             android:textSize="@dimen/_20mdp"
 
-            android:text="4.5"
+            android:text="0.0"
             android:textAlignment="center"
-            android:textColor="#5F5E5E"
+            android:textColor="@color/color"
             android:textStyle="normal"
             app:layout_constraintTop_toBottomOf="@+id/placename"
             app:layout_constraintStart_toStartOf="@+id/placename"
@@ -74,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="@dimen/_7mdp"
-            android:background="@color/white"
+            android:background="@color/backgroundcolor"
             android:isIndicator="true"
             android:progressTint="#FFD700"
             android:rating="0"
@@ -88,165 +92,103 @@
             app:layout_constraintTop_toBottomOf="@+id/simpleRatingBar"
             app:layout_constraintEnd_toEndOf="@id/simpleRatingBar"
             app:layout_constraintStart_toStartOf="@id/simpleRatingBar"
-            android:text="(576)"/>
+            android:text="(000)"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/placephotos"
-            app:drawableStartCompat="@drawable/save"
-            android:layout_marginEnd="@dimen/_4font_mdp"
-            />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/placephotos"-->
+<!--            app:drawableStartCompat="@drawable/save"-->
+<!--            android:layout_marginEnd="@dimen/_4font_mdp"-->
+<!--            />-->
 
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description_value"
-            android:textColor="@color/black"
+            android:textColor="@color/color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             android:layout_marginStart="@dimen/_8mdp"
             app:layout_constraintStart_toStartOf="@+id/rating"
             app:layout_constraintTop_toBottomOf="@+id/ratingnumber" />
 
-        <TextView
+
+        <Button
             android:id="@+id/userphotos"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20mdp"
-            android:layout_marginEnd="@dimen/_20mdp"
-            android:background="@drawable/edittext_round_shape"
-            android:backgroundTint="#FFEB3B"
+            android:backgroundTint="@color/yellow"
             android:text="User Photos"
             android:textAlignment="center"
+            android:layout_marginTop="@dimen/_20mdp"
+            app:layout_constraintTop_toBottomOf="@id/usersreview"
+
             android:textColor="@color/white"
             android:textSize="@dimen/_20mdp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/_45mdp"
-
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description"
-            />
-
+            tools:layout_editor_absoluteY="531dp" />
 
         <Button
             android:id="@+id/howtogo"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_100mdp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:textStyle="bold|normal"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:drawableEnd="@drawable/transport"
+            android:maxLines="2"
             android:layout_marginTop="@dimen/_9font_mdp"
             android:text="How to go there!"
-            app:layout_constraintStart_toStartOf="@+id/userphotos"
-            app:layout_constraintTop_toBottomOf="@id/userphotos" />
+           app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
 
-        <TextView
+        <Button
             android:id="@+id/usersreview"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_120mdp"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/arrowright"
             android:text="User's Review"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/_9font_mdp"
+           android:backgroundTint="@color/white"
             android:textColor="@color/black"
             android:textSize="@dimen/_15mdp"
-            android:textStyle="bold|normal"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+           app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
-            app:layout_constraintTop_toBottomOf="@+id/howtogo" />
-
-        <TextView
-            android:id="@+id/textrate"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/usersreview"
-            android:text="Rate this place..."
-            android:textSize="@dimen/_25mdp"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold|normal"
-            />
+            android:layout_height="@dimen/_50mdp"
+            app:layout_constraintTop_toBottomOf="@id/userphotos"/>
 
-        <RatingBar
-            android:id="@+id/placeratingbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textrate" />
+<!--        <TextView-->
+<!--            android:id="@+id/textrate"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/userphotos"-->
+<!--            android:layout_marginTop="@dimen/_70mdp"-->
+<!--            android:text="Rate this place..."-->
+<!--            android:textSize="@dimen/_25mdp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/color"-->
+<!--            android:textStyle="bold|normal"-->
+<!--            />-->
 
+<!--        <RatingBar-->
+<!--            android:id="@+id/placeratingbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:numStars="5"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textrate" />-->
 
-
-
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="How to go there!"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="@dimen/_20mdp"-->
-        <!--            android:textStyle="normal|bold"-->
-        <!--           android:background="#03A9F4"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/userphotos"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/userphotos" />-->
-
-
-
-
-
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/loca"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Location.."-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="@dimen/_25mdp"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/userphotos" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/location"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Vaisali,Bihar,India"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/loca" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/comment"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:text="Comments.."-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="@dimen/_25mdp"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/location" />-->
-
-        <!--        <androidx.recyclerview.widget.RecyclerView-->
-        <!--            android:id="@+id/commentsRv"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/comment" />-->
-
-        <!--        <com.denzcoskun.imageslider.ImageSlider-->
-        <!--            android:id="@+id/sliderphotos"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="@dimen/_127mdp"-->
-        <!--            android:scaleType="centerCrop"-->
-        <!--            android:src="@drawable/uttarakhand"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/comment" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

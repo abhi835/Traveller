@@ -1,10 +1,14 @@
 package com.example.traveller.Model
 
 data class userphotos(
-    val placeName:String = "",
-    val placePic:String ="",
-    val placeRating:Int = 0,
-    val placePhotos:Array<String>,
-    val description:String = "",
-    val location:String
+    var userPhotos:List<String> = emptyList(),
+//    val userPhotos:String ="",
+    val createdBy:User = User(),                 //Here we have created who have created the post
+    val createdAt:Long= 0L,
+//    val optionBy:ArrayList<String> = ArrayList(),
+    val noofvotes:Int = 0,
+    val votedBy:ArrayList<String> = ArrayList()    //
 )
+//{
+//    constructor(): this("", "")
+//}

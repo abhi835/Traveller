@@ -3,10 +3,8 @@ package com.example.traveller
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.traveller.Adapter.locationAdapter
 import com.example.traveller.Adapter.reviewAdapter
 import com.example.traveller.Daos.PostDao
-import com.example.traveller.Model.location
 import com.example.traveller.Model.review
 import com.example.traveller.databinding.ActivityReviewBinding
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
@@ -32,11 +30,10 @@ class reviewActivity : AppCompatActivity(), reviewAdapter.IReviewAdapter {
              val reviewtext = binding.reviewET.getText().toString().trim()
             if(reviewtext.isNotEmpty()){
                 postDao.addreview(reviewtext,place)
-//                finish()         //With this it will come to main activity
-
+                 binding.reviewET.getText().clear()
             }
-
         }
+
         setUpRecyclerView()
     }
     private fun  setUpRecyclerView(){
@@ -66,11 +63,11 @@ class reviewActivity : AppCompatActivity(), reviewAdapter.IReviewAdapter {
     }
 
     override fun onVoteClicked(postId: String) {
-        postDao.upgradevotes(postId,place)
+        postDao.upgradereviewvotes(postId,place)
 
     }
 
     override fun onVotedownClicked(postId: String) {
-        postDao.downgradevotes(postId,place)
+        postDao.downgradereviewvotes(postId,place)
     }
 }

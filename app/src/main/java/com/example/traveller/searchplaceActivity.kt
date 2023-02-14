@@ -114,7 +114,7 @@ class searchplaceActivity : AppCompatActivity() , onitemClicked {
             if(document!=null){
                     val ArrayList:ArrayList<String> = document.get("searchplacesList") as ArrayList<String>
                 for(i in ArrayList){
-                    courseModelArrayList.add(searchplace(i.toString()))
+                    courseModelArrayList.add(searchplace(i))
                 }
             }else{
                 Log.d(ContentValues.TAG, "No such document")
@@ -130,26 +130,6 @@ class searchplaceActivity : AppCompatActivity() , onitemClicked {
         // below line is to add data to our array list.
 //        courseModelArrayList.add(searchplace("Delhi City"))
 //        courseModelArrayList.add(searchplace("Agra"))
-//        courseModelArrayList.add(searchplace("Panji"))
-//        courseModelArrayList.add(searchplace("Radhanagar Beach"))
-//        courseModelArrayList.add(searchplace("Mahabodhi Temple"))
-//        courseModelArrayList.add(searchplace("Vikramshila"))
-//        courseModelArrayList.add(searchplace("Great Buddha Statue"))
-//        courseModelArrayList.add(searchplace("Red Fort"))
-//        courseModelArrayList.add(searchplace("Lotus Temple"))
-//        courseModelArrayList.add(searchplace("India Gate"))
-//        courseModelArrayList.add(searchplace("Humayun’s Tomb"))
-//        courseModelArrayList.add(searchplace("Raj Ghat"))
-//        courseModelArrayList.add(searchplace("Agonda Beach"))
-//        courseModelArrayList.add(searchplace("Palolem Beach"))
-//        courseModelArrayList.add(searchplace("Gulmarg"))
-//        courseModelArrayList.add(searchplace("Tulip Garden"))
-//        courseModelArrayList.add(searchplace("Dal Lake"))
-//        courseModelArrayList.add(searchplace("Taj Mahal"))
-//        courseModelArrayList.add(searchplace("Agra Fort"))
-//        courseModelArrayList.add(searchplace("Digha Sea Beach"))
-//        courseModelArrayList.add(searchplace("Darjeeling Mountain Hills"))
-//        courseModelArrayList.add(searchplace("Murshidabad Historical City"))
 
 
         // initializing our adapter class.

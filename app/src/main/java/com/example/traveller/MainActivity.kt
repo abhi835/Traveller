@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity(),IPostAdapter {
     }
     override fun onStateClicked(postId: String) {
 //        val stateid = getStateById(postId)
-            Toast.makeText(this,"$postId Clicked",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,"$postId Clicked",Toast.LENGTH_SHORT).show()
         val intent = Intent(this,StateCitiesActivity::class.java)
         intent.putExtra("stateId",postId)
         startActivity(intent)

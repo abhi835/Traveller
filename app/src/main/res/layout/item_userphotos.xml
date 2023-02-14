@@ -1,25 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor"
+    android:layout_marginTop="16dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:id="@+id/imge"
-        android:src="@drawable/uttarakhand"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageSwitcher
-        android:id="@+id/switcher"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_98mdp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imge" />
+        <ImageView
+            android:id="@+id/userphotoImage"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userphotoName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userphotoImage"
+            app:layout_constraintTop_toTopOf="@+id/userphotoImage"
+            android:layout_marginStart="12dp"
+            android:text="Modi"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/photocreatedAt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userphotoImage"
+            app:layout_constraintTop_toBottomOf="@+id/userphotoName"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+
+            />
+<com.denzcoskun.imageslider.ImageSlider
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_200mdp"
+    android:scaleType="centerCrop"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/userphotoImage"
+    android:id="@+id/userphoto"/>
+
+<!--<ImageView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="@dimen/_200mdp"-->
+<!--    android:scaleType="centerCrop"-->
+<!--    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--    app:layout_constraintRight_toRightOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/userphotoImage"-->
+<!--    android:id="@+id/userphoto"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/userphotoImage"-->
+<!--            android:id="@+id/reviewTitle"-->
+<!--            android:textSize="16sp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:textColor="#212121" />-->
+
+        <ImageView
+            android:id="@+id/likephotoButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrowup"
+            app:layout_constraintLeft_toLeftOf="@id/userphoto"
+            app:layout_constraintTop_toBottomOf="@id/userphoto"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/likephotoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="55"
+            app:layout_constraintLeft_toRightOf="@id/likephotoButton"
+            app:layout_constraintTop_toTopOf="@id/likephotoButton"
+            android:layout_marginStart="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/likephotoButton" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/downvoteButton"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/arrowdownward"-->
+<!--            app:layout_constraintStart_toEndOf="@id/likeCount"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/reviewTitle"-->
+<!--            android:layout_marginStart="@dimen/_6mdp"-->
+<!--            android:layout_marginTop="16dp" />-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

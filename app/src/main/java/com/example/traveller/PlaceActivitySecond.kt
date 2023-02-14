@@ -2,16 +2,16 @@ package com.example.traveller
 
 import android.content.ContentValues
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.example.traveller.databinding.ActivityPlaceBinding
 import com.example.traveller.databinding.ActivityPlaceSecondBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.DecimalFormat
 
 class PlaceActivitySecond : AppCompatActivity() {
     lateinit var binding:ActivityPlaceSecondBinding
@@ -27,8 +27,8 @@ class PlaceActivitySecond : AppCompatActivity() {
         val  place = intent.getStringExtra("place").toString()
 
         binding.placephotos.setOnClickListener{
-            Toast.makeText(this,place+"   is gooo000000d", Toast.LENGTH_SHORT).show()
-//            val intent  = Intent(this,UserPhotosActivity::class.java)
+//            Toast.makeText(this,place+"   is gooo000000d", Toast.LENGTH_SHORT).show()
+//            val intent  = Intent(this,UserPhotosActivity::class.java)vZ
 //            startActivity(intent)
         }
 
@@ -41,6 +41,15 @@ class PlaceActivitySecond : AppCompatActivity() {
 
 //                Toast.makeText(this,"${document.getString("placeName")} always always clicked,", Toast.LENGTH_SHORT).show()
                 binding.placename.setText(document.getString("placeName"))
+                binding.description.setText(document.getString("placeDescription"))
+                  val k = document.getLong("ratingNumber")
+                val formatter = DecimalFormat("#,###")
+                val formatted: String = formatter.format(k)
+                binding.ratingnumber.text = "($formatted)"
+//                document.getLong("ratingNumber").toString().also { binding.ratingnumber.text =
+//                    "($it)"
+//                }
+
 //                Glide.with(this)
 //                    .load(document.getString("placePic"))
 //                    .into(binding.placephotos)
@@ -68,7 +77,7 @@ class PlaceActivitySecond : AppCompatActivity() {
                 for(i in photoarray){
                     simplearray.add(SlideModel(i))
                 }
-                placeslider.setImageList(simplearray, ScaleTypes.CENTER_CROP)
+                placeslider.setImageList(simplearray, ScaleTypes.CENTER_INSIDE)
                 /////
                 document.getDouble("placeRating").toString().also { binding.rating.text = it }
                 val rating = document.getDouble("placeRating")
@@ -77,6 +86,7 @@ class PlaceActivitySecond : AppCompatActivity() {
                 }
 
                 Log.d(ContentValues.TAG, "DocumentSnapshot data: ${document.data}")
+
             }else{
                 Log.d(ContentValues.TAG, "No such document")
             }
@@ -89,7 +99,7 @@ class PlaceActivitySecond : AppCompatActivity() {
 
         binding.userphotos.setOnClickListener{
             val intent  = Intent(this,UserPhotosActivity::class.java)
-            intent.putExtra("photoarray",photoarray.toString())
+            intent.putExtra("place",place)
             startActivity(intent)
         }
 
@@ -106,5 +116,6 @@ class PlaceActivitySecond : AppCompatActivity() {
          }
 
     }
+
 
 }

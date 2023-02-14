@@ -19,7 +19,8 @@ class NewStatesAdapter(options: FirestoreRecyclerOptions<NewStates>,val listener
     class PostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
      val statepic:ImageView = itemView.findViewById(R.id.CityPlacesImage)
         val statename:TextView = itemView.findViewById(R.id.CityPlacesTitle)
-        val stateRating:TextView = itemView.findViewById(R.id.CityPlacesRating)
+//        val stateRating:TextView = itemView.findViewById(R.id.CityPlacesRating)
+        val stateDes:TextView = itemView.findViewById(R.id.stateDes)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): PostViewHolder {
@@ -34,8 +35,8 @@ class NewStatesAdapter(options: FirestoreRecyclerOptions<NewStates>,val listener
     override fun onBindViewHolder(holder: PostViewHolder, position: Int, model: NewStates) {
          holder.statename.text = model.stateName
         Glide.with(holder.statepic.context).load(model.statePic).into(holder.statepic)
-        holder.stateRating.text = model.stateRating.toString()
-
+//        holder.stateRating.text = model.stateRating.toString()
+        holder.stateDes.text = model.stateDes
 
     }
 }

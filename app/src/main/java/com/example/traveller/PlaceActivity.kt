@@ -30,7 +30,7 @@ class PlaceActivity : AppCompatActivity() {
 
 
         binding.placephotos.setOnClickListener{
-            Toast.makeText(this,city+"   is gooo000000d",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,city+"   is gooo000000d",Toast.LENGTH_SHORT).show()
 //            val intent  = Intent(this,UserPhotosActivity::class.java)
 //            startActivity(intent)
         }

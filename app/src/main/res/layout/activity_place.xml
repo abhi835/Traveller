@@ -8,6 +8,7 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
+    android:background="@color/backgroundcolor"
     app:layout_constraintTop_toTopOf="parent">
 
 
@@ -19,9 +20,9 @@
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/placephotos"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_277mdp"
+            android:layout_height="@dimen/_300mdp"
             android:scaleType="centerCrop"
-            android:src="@drawable/uttarakhand"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

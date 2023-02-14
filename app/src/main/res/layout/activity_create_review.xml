@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
     tools:context=".CreateReviewActivity">
 
     <EditText
@@ -19,9 +20,9 @@
 
     <Button
         android:id="@+id/postButton"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/_255mdp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="#FFD700"
 
         android:text="POST"
         android:layout_marginTop="27dp"

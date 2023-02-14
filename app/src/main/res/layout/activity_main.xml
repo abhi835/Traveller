@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+android:background="@color/backgroundcolor"
     tools:context=".MainActivity">
 
  <ImageView
@@ -35,7 +36,7 @@
      android:layout_height="wrap_content"
      android:text="Explore"
      android:textAlignment="center"
-     android:textColor="@color/black"
+     android:textColor="@color/color"
      android:textSize="@dimen/_45mdp"
      android:textStyle="bold"
      android:drawableEnd="@drawable/arrowdown"
@@ -85,7 +86,7 @@ app:layout_constraintEnd_toStartOf="@+id/searchimage"
      android:layout_width="@dimen/_25mdp"
      android:layout_height="@dimen/_25mdp"
      android:src="@drawable/search"
-     android:background="#FFEB3B"
+     android:background="@color/backgroundcolor"
      app:layout_constraintBottom_toBottomOf="@+id/searchplacebutton"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toEndOf="@id/searchplacebutton"

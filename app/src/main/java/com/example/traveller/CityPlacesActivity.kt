@@ -67,7 +67,7 @@ var StatecitiesCollection = db.collection("States")
     private fun setupRecyclerView() {
              val postCollection = StatecitiesCollection
         val query =postCollection.whereEqualTo("placeCity",cityName)
-            .orderBy("placeRating", Query.Direction.ASCENDING)      //Here we are getting Query from PostDao and we will feed the data into adapter we have also sorted out posts on the basis of "created AT" which is time and it will show newest posts at first in recyclerView
+            .orderBy("ratingNumber", Query.Direction.DESCENDING)      //Here we are getting Query from PostDao and we will feed the data into adapter we have also sorted out posts on the basis of "created AT" which is time and it will show newest posts at first in recyclerView
         val recyclerViewOptions =
             FirestoreRecyclerOptions.Builder<CityPlaces>().setQuery(query,CityPlaces::class.java).build()
 
@@ -89,7 +89,7 @@ var StatecitiesCollection = db.collection("States")
     }
     override fun CityPlaceClicked(postId: String) {
 //        val stateid = getStateById(postId)
-        Toast.makeText(this,"$postId place Clicked",Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this,"$postId place Clicked",Toast.LENGTH_SHORT).show()
         val intent = Intent(this,PlaceActivitySecond::class.java)
         intent.putExtra("place",postId)
         intent.putExtra("city",cityName)
