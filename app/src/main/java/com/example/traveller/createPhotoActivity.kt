@@ -191,14 +191,12 @@ class createPhotoActivity : AppCompatActivity() {
 
             val urlTask = uploadTask.continueWithTask { task ->
                 if (!task.isSuccessful) {
-
                     task.exception?.let {
                         throw it
                     }
                 }
                 storageReference.downloadUrl
             }.addOnCompleteListener { task ->
-
                 if (task.isSuccessful) {
                     downloadUri = task.result.toString()
 //                    Toast.makeText(this,"it happened $downloadUri ",Toast.LENGTH_SHORT).show()
