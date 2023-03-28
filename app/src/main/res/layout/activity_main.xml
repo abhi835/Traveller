@@ -29,7 +29,6 @@ android:background="@color/backgroundcolor"
      android:layout_marginTop="@dimen/_5mdp"
      app:layout_constraintTop_toTopOf="parent" />
 
-
  <TextView
      android:id="@+id/traveller"
      android:layout_width="wrap_content"
@@ -102,5 +101,19 @@ app:layout_constraintEnd_toStartOf="@+id/searchimage"
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintTop_toBottomOf="@+id/searchplacebutton" />
 
+ <com.google.android.gms.ads.AdView
+     android:id="@+id/adView"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_centerHorizontal="true"
+     app:adSize="BANNER"
+     app:adUnitId="ca-app-pub-8291678414724917/1075569445"
+     app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.534"
+     app:layout_constraintStart_toStartOf="parent">
 
+
+ </com.google.android.gms.ads.AdView>
 </androidx.constraintlayout.widget.ConstraintLayout>

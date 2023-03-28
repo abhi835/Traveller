@@ -23,9 +23,11 @@
         android:layout_height="wrap_content"
         android:iconifiedByDefault="false"
         android:queryHint="Enter here"
-        app:iconifiedByDefault="false"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
+        app:searchIcon="@drawable/blacksearch"
+        android:textColorHint="@color/purple_200"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="180dp"
         app:layout_constraintTop_toTopOf="parent"/>

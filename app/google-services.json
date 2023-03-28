@@ -7,26 +7,26 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:513505381620:android:f3f91a319972b694c8a2a1",
+        "mobilesdk_app_id": "1:513505381620:android:1cf257cd81ee9044c8a2a1",
         "android_client_info": {
-          "package_name": "com.example.traveller"
+          "package_name": "com.travel.traveller"
         }
       },
       "oauth_client": [
         {
-          "client_id": "513505381620-herub3ma2h77i8g8cgmqt6ulnf16hbkc.apps.googleusercontent.com",
+          "client_id": "513505381620-13dmul8p37hbu45jr531j0gk23l6biv5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.traveller",
+            "package_name": "com.travel.traveller",
             "certificate_hash": "b742d64a5620009e3b8b2ae067bf6198f3d230fc"
           }
         },
         {
-          "client_id": "513505381620-jlsbt5l774vaouish2imv19d9fgmcohn.apps.googleusercontent.com",
+          "client_id": "513505381620-9tg8o18iqgiofbp2fvko0v20g41i2sna.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.traveller",
-            "certificate_hash": "bda7f9000700a6f13634df8eb5872fe9ce2a3adf"
+            "package_name": "com.travel.traveller",
+            "certificate_hash": "1dfe38cf8a865752baeeaa1c071c53ba439ca93a"
           }
         },
         {
